@@ -1,23 +1,58 @@
 <!DOCTYPE html>
+<!-- Define que o documento é HTML5 -->
+
 <html>
+<!-- Início do documento HTML -->
+
     <head>
-        <meta charset = "UTF - 8">
-        <tittle> Econmonitor Iot </tittle>
+        <!-- Parte "invisível" da página (configurações) -->
+
+        <meta charset = "UTF-8">
+        <!-- Define a codificação de caracteres (permite acentos como ç, ã, etc)
+
+        <title> Econmonitor Iot </title>
+        <!-- Define o título da aba do navegador
+
         <link rel = "stylesheet" href = "style.css">
+        <!-- Conecta um arquivo CSS externo para estilizar a página -->
     </head> 
+
     <body>
+        <!-- Tudo que aparece na tela fica aqui -->
+
         <header>
+            <!-- Cabeçalho da página -->
+
             <h1> Econmonitor </h1>
+            <!-- Título principal visível -->
         </header>
+
         <main id = "dashboard">
-            <div id = "card sensor" class= "card">
+            <!-- Área principal da página (conteúdo principal) -->
+
+            <div id = "card-sensor" class= "card">
+                <!-- Cria um "card" (caixinha visual) -->
                 <h2 id = "nome-sensor"> Carregando ...</h2>
+                <!-- Onde vai aparecer o nome do sensor
+                     Começa com "Carregando..." até os dados chegarem -->
+
                 <div class = "display">
+                    <!-- Área para mostrar o valor do sensor -->
+
                     <span id = "valor-sensor">--</span>%
+                    <!-- Mostra o valor numérico (ex: 45%)
+                         Começa com "--" como placeholder -->
                 </div>
+
                 <p id = "mensagem-status"> Status: Iniciando ...</p>
+                <!-- Mensagem de status do sistema -->
             </div>
         </main>
+
         <script src = "script.js"></script>
+        <!-- Importa o JavaScript que vai:
+             - Buscar dados da API
+             - Atualizar a tela automaticamente -->
     </body>
+
 </html>
